@@ -1,0 +1,46 @@
+# sync_list supports comments
+#
+# The ordering of entries is highly recommended - exclusions before inclusions
+#
+# Exclude temp folder(s) or file(s) under Documents folder(s), anywhere in Onedrive
+!Documents/temp*
+#
+# Exclude secret data folder in root directory only
+!/Secret_data/*
+#
+# Include everything else in root directory
+/*
+#
+# Include my Backup folder(s) or file(s) anywhere on Onedrive
+Backup
+#
+# Include my Backup folder in root
+/Backup/
+#
+# Include Documents folder(s) anywhere in Onedrive
+Documents/
+#
+# Include all PDF files in Documents folder(s), anywhere in Onedrive
+Documents/*.pdf
+#
+# Include this single document in Documents folder(s), anywhere in Onedrive
+Documents/latest_report.docx
+#
+# Include all Work/Project directories or files, inside 'Work' folder(s), anywhere in Onedrive
+Work/Project*
+#
+# Include all "notes.txt" files, anywhere in Onedrive
+notes.txt
+#
+# Include /Blender in the ~Onedrive root but not if elsewhere in Onedrive
+/Blender
+#
+# Include these directories(or files) in 'Pictures' folder(s), that have a space in their name
+Pictures/Camera Roll
+Pictures/Saved Pictures
+#
+# Include these names if they match any file or folder
+Cinema Soc
+Codes
+Textbooks
+Year 2
