@@ -1,15 +1,10 @@
 #!/bin/bash
 
+# Repositório oficial usado no script
 # https://github.com/abraunegg/onedrive/
 
 # Variáveis de ambiente
-export ONEDRIVE_CONTAINER_NAME=onedrive
-export ONEDRIVE_CONFIG_DIR="${HOME}/.onedrive_conf"
-export ONEDRIVE_DATA_DIR="${HOME}/OneDrive"
-export ONEDRIVE_CONFIG_VOLUME=onedrive_conf
-export ONEDRIVE_DATA_VOLUME=onedrive_data
-export ONEDRIVE_UID=`id -u`
-export ONEDRIVE_GID=`id -g`
+source .env
 
 # Variável do script para rodar na primeira vez 
 firstRun='-d'

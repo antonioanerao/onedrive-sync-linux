@@ -5,7 +5,16 @@
     
 ### Como usar
 
-Faça uma cópia do arquivo config/sync_list para adicionar as pastas que você quer sincronizar
+Clone este repositório em qualquer local de sua preferência e acesse a pasta clonada. Seu usuário deve ter permissão de escrita nessa pasta e subpastas
+
+    $ git clone https://github.com/antonioanerao/onedrive-sync-linux.git && cd onedrive-sync-linux
+
+Faça uma cópia do arquivo .env.example com o nome .env <br>
+Este arquivo contem as variáveis de ambiente para controlar nome de pastas, volumes e container. Edite conforme necessidade.
+
+    $ cp .env.example .env
+
+Faça uma cópia do arquivo config/sync_list para adicionar as pastas que você quer sincronizar. Se não fizer, *TODO* conteúdo do seu OneDrive será clonado.
 
     $ cp config/sync_list.example config/sync_list
     
@@ -28,7 +37,7 @@ Após o acesso você verá apenas uma página em branco. Copie o LINK completo d
 Quando a sincronização iniciar você verá na tela algo como *Initializing the Synchronization Engine ...*. <br>
 Para sair do console do container sem encerrar o container use os atalhos do teclado **CTRL + P + Q**
     
-Execute o arquivo stop.sh para parar o container
+Caso queira pausar o container, execute o arquivo stop.sh
     
     $ ./stop.sh
     
@@ -37,3 +46,7 @@ O comando removerá o container e depois as pastas e docker voluems criados.
 Não afeta os arquivos remotos.
 
     $ ./clear.sh
+
+Caso queira remover permanentemente o container mas queira deixar as pastas e volumes: (troque onedrive pelo nome do seu container)
+
+    $ docker container rm -f onedrive

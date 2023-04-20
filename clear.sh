@@ -1,8 +1,5 @@
-export ONEDRIVE_CONTAINER_NAME=onedrive
-export ONEDRIVE_CONFIG_DIR="${HOME}/.onedrive_conf"
-export ONEDRIVE_DATA_DIR="${HOME}/OneDrive"
-export ONEDRIVE_CONFIG_VOLUME=onedrive_conf
-export ONEDRIVE_DATA_VOLUME=onedrive_data
+# Inclui as variáveis de ambiente
+source .env
 
 sudo docker container rm -f ${ONEDRIVE_CONTAINER_NAME}
 rm -rf "${ONEDRIVE_DATA_DIR}"
